@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/Vazirmatn-FD-WOL.woff2') format('woff2'); /* این فونت را باید دانلود و در پوشه assets بگذاری */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  background-color: #f8f0e3; /* رنگ پس‌زمینه روشن‌تر */
+  background-image: url('assets/pattern.svg'); /* طرح پس‌زمینه */
+  background-repeat: repeat;
+  background-size: 200px; /* اندازه تکرار طرح */
+  color: #5a3d00; /* رنگ متن اصلی */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* جلوگیری از اسکرول اضافی */
+}
+
+.main-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* پس‌زمینه سفید با کمی شفافیت */
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px); /* افکت بلور */
+}
+
+header h1 {
+  font-size: 3em; /* عنوان بزرگتر */
+  margin-bottom: 50px;
+  color: #8a6d00; /* رنگ تیره‌تر برای عنوان */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 50px; /* فاصله بیشتر بین دکمه‌ها */
+  justify-content: center;
+  flex-wrap: wrap; /* برای نمایش بهتر در موبایل */
+}
+
+.tour-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* گرادیانت سفید */
+  border: 1px solid #e0e0e0;
+  min-width: 200px; /* حداقل عرض دکمه */
+}
+
+.tour-button:hover {
+  transform: translateY(-10px) scale(1.05); /* حرکت به بالا و کمی بزرگ شدن */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2); /* سایه عمیق‌تر */
+}
+
+.icon-wrapper {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #f8f0e3; /* رنگ زمینه آیکون */
+  border-radius: 50%;
+  border: 3px solid #e0c88a; /* حاشیه دور آیکون */
+}
+
+.tour-button img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.tour-button h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #5a3d00; /* رنگ متن دکمه */
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+  .buttons-container {
+    gap: 30px;
+  }
+  .tour-button {
+    min-width: 180px;
+  }
+  .icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .tour-button img {
+    width: 50px;
+    height: 50px;
+  }
+  .tour-button h2 {
+    font-size: 1.5em;
+  }
+  .main-container {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+  .buttons-container {
+    flex-direction: column; /* دکمه‌ها روی هم */
+    align-items: center;
+  }
+  .main-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
