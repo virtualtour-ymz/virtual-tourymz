@@ -4,33 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تور مجازی دانشکده علوم‌پزشکی فردوس</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- خط ضربان پس‌زمینه -->
+  <svg class="pulse-line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 L280,60 L320,20 L360,100 L400,40 L440,60 L1200,60"/>
+  </svg>
+
   <div class="main-container">
+
     <header>
-      <h1>تور مجازی دانشکده فردوس</h1>
+      <span class="kicker">دانشکده علوم‌پزشکی فردوس</span>
+      <h1>تور مجازی <span>دانشکده</span></h1>
+      <p class="subtitle">قدم‌به‌قدم در فضاهای آموزشی، درمانی و پژوهشی دانشکده قدم بزنید؛ همین حالا و از هر جا.</p>
     </header>
 
     <main class="buttons-container">
-      <div class="tour-button" onclick="openTour('pc-tour/index.html')">
+      <button class="tour-button" type="button" onclick="openTour('pc-tour/index.html')">
         <div class="icon-wrapper">
-          <img src="assets/pc-icon.svg" alt="کامپیوتر">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2.5" y="4" width="19" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
         <h2>نسخه PC</h2>
-      </div>
+        <p>تجربه‌ی کامل با کیفیت بالا، مناسب مانیتور و صفحه‌کلید</p>
+        <span class="cta">شروع تور <i>←</i></span>
+      </button>
 
-      <div class="tour-button" onclick="openTour('mobile-tour/index.html')">
+      <button class="tour-button" type="button" onclick="openTour('mobile-tour/index.html')">
         <div class="icon-wrapper">
-          <img src="assets/mobile-icon.svg" alt="موبایل">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="7" y="2.5" width="10" height="19" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M11 18.2h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
         <h2>نسخه موبایل</h2>
-      </div>
+        <p>بهینه‌شده برای گوشی، همراه شما در هر لحظه</p>
+        <span class="cta">شروع تور <i>←</i></span>
+      </button>
     </main>
 
+    <section class="about-tour">
+      <button class="about-toggle" type="button" aria-expanded="false" aria-controls="about-panel">
+        <span>درباره تور</span>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="about-panel" id="about-panel">
+        <div class="about-panel-inner">
+          <p>
+            این تور مجازی به شما امکان می‌دهد بدون نیاز به حضور فیزیکی، فضاهای مختلف دانشکده علوم‌پزشکی فردوس از جمله سالن‌های آموزشی، آزمایشگاه‌ها، کتابخانه و بخش‌های اداری را از نزدیک مشاهده کنید. کافی است نسخه‌ی متناسب با دستگاه خود را انتخاب کنید و به‌صورت ۳۶۰ درجه در محیط دانشکده قدم بزنید.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <footer>
-      <p>توجه: در صورت کندی ، برای تجربه بهتر از فیلترشکن استفاده کنید</p>
+      <p>توجه: در صورت کندی، برای تجربه بهتر از فیلترشکن استفاده کنید.</p>
     </footer>
   </div>
 
